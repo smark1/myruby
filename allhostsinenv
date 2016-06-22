@@ -27,7 +27,7 @@ def find_hosts(self, target_env, app, opsnode_data):
 “””finds hosts for app and env”””
 if “deploy.host” in opsnode_data:
 opsnode_Data = str(opsnode_data)
-new = opsnode_data.split(“\n")
+new = opsnode_data.split("/n")
 for i in new:
    if i.endswith(“com”):
    hostlist.append(i.split(“=“)[1]
@@ -36,7 +36,7 @@ return hotlist
 
 def print_out(self, hostlist, app, target_env):
    “””print out”””
-    print “\n\n ****{0) Hosts found for {1} in {2} ***\n\n”.format(len(hostlist), app, target_env)
+    print “\n\n ****{0) Hosts found For {1} In {2} ****\n\n”.format(len(hostlist), app, target_env)
     counter=0
 for i in hostlist:
 counter+=1
