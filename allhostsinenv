@@ -27,7 +27,7 @@ def find_hosts(self, target_env, app, opsnode_data):
 “””finds hosts for app and env”””
 if “deploy.host” in opsnode_data:
 opsnode_Data = str(opsnode_data)
-new = opsnode_data.split(“\n)
+new = opsnode_data.split(“\n")
 for i in new:
    if i.endswith(“com”):
    hostlist.append(i.split(“=“)[1]
